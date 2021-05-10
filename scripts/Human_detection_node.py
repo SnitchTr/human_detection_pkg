@@ -19,10 +19,10 @@ class Human_Check_Node:
         self.min_conf_threshold = 0.5
         self.imW, self.imH = 1920, 1080
         # Path to .tflite file, which contains the model that is used for object detection
-        self.PATH_TO_CKPT = '/home/ubuntu/catkin_ws/tflite1/models/coco_model/detect.tflite'
+        self.PATH_TO_CKPT = '/home/ubuntu/catkin_ws/src/human_detection_pkg/models/coco_model/detect.tflite'
 
         # Path to label map file
-        self.PATH_TO_LABELS = '/home/ubuntu/catkin_ws/tflite1/models/coco_model/labelmap.txt'
+        self.PATH_TO_LABELS = '/home/ubuntu/catkin_ws/src/human_detection_pkg/models/coco_model/labelmap.txt'
 
         # Load the label map
         with open(self.PATH_TO_LABELS, 'r') as f:
