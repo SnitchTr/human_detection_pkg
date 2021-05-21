@@ -93,7 +93,7 @@ class Human_Check_Node:
                     rospy.loginfo(info)
         self.human_check_publisher.publish(human)
         if human == False:
-            rospy.loginfo('Seems like no one is arround...')
+            rospy.loginfo('Seems like no one is around...')
 if __name__ == "__main__":
     rospy.init_node("Human_Check_Node")
     node = Human_Check_Node()
