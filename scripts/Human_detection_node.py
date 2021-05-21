@@ -15,14 +15,15 @@ from sensor_msgs.msg import Image
 # Source - Adrian Rosebrock, PyImageSearch: https://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/
 class Human_Check_Node:
     def __init__(self):
+        homedir = os.path.expanduser("~")
         # Define and parse input arguments
         self.min_conf_threshold = 0.5
         self.imW, self.imH = 1920, 1080
         # Path to .tflite file, which contains the model that is used for object detection
-        self.PATH_TO_CKPT = '/home/ubuntu/catkin_ws/src/human_detection_pkg/models/coco_model/detect.tflite'
+        self.PATH_TO_CKPT = homedir + 'catkin_ws/src/human_detection_pkg/models/coco_model/detect.tflite'
 
         # Path to label map file
-        self.PATH_TO_LABELS = '/home/ubuntu/catkin_ws/src/human_detection_pkg/models/coco_model/labelmap.txt'
+        self.PATH_TO_LABELS =  homedir + 'catkin_ws/src/human_detection_pkg/models/coco_model/labelmap.txt'
 
         # Load the label map
         with open(self.PATH_TO_LABELS, 'r') as f:
